@@ -22,20 +22,20 @@ export const App: FC = () => {
   };
 
   // [削除]ボタン押下時（何番目が押されたかを引数で受け取る）
-  const onClickDelete = useCallback(
-    (index: number) => {
-      // カスタムフックのメモ削除ロジックの実行
-      deleteTodo(index);
-    },
-    [deleteTodo]
-  );
+  // const onClickDelete = useCallback(
+  //   (index: number) => {
+  //     // カスタムフックのメモ削除ロジックの実行
+  //     deleteTodo(index);
+  //   },
+  //   [deleteTodo]
+  // );
 
   return (
     <div>
       <h1>簡単メモアプリ</h1>
       <input type="text" value={text} onChange={onChangeText} />
       <SButton onClick={onClickAdd}>追加</SButton>
-      <MemoList memos={memos} onClickDelete={onClickDelete} />
+      {/* <MemoList memos={memos} onClickDelete={onClickDelete} /> */}
     </div>
   );
 };
